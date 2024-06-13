@@ -3,3 +3,11 @@ services:
     build: .
     ports:
       - "8080:8080"
+    command: npm run dev
+    develop:
+      watch:
+        - action: sync
+          path: ./
+          target: /app
+        - action: rebuild
+          path: package.json
