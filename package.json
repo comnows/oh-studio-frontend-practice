@@ -36,6 +36,7 @@
     "vite": "^5.2.0"
   },
   "lint-staged": {
-    "src/**/*": "prettier-eslint --write --ignore-unknown"
+    "src/**/*": "prettier --write --ignore-unknown",
+    "src/**/*.{ts,tsx}": "eslint --fix"
   }
 }
