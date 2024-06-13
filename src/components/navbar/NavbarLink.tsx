@@ -1,10 +1,11 @@
-type LinkProps = {
-  name: string;
-  link: string;
+import { Link } from "react-router-dom";
+import { Link as LinkType } from "../../lib/types";
+
+type LinkProps = LinkType & {
   isSelected: boolean;
 };
 
-function NavbarLink({ name, link, isSelected }: LinkProps) {
+function NavbarLink({ name, href, isSelected }: LinkProps) {
   return (
     <div
       className={
@@ -12,12 +13,12 @@ function NavbarLink({ name, link, isSelected }: LinkProps) {
         (isSelected ? " bg-white" : "")
       }
     >
-      <a
-        href={link}
+      <Link
+        to={href}
         className="block w-full h-10 text-sm leading-9 md:leading-10"
       >
         {name}
-      </a>
+      </Link>
     </div>
   );
 }
