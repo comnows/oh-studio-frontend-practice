@@ -26,9 +26,9 @@ function Card({ name, image, isLock = false }: CardProps) {
       </div>
       <div
         className={
-          "absolute md:top-10 md:right-10 bg-white text-black md:group-hover:opacity-100 md:group-hover:top-5 md:group-hover:right-5 rounded-full p-4 transition-all" +
+          "absolute md:top-10 md:right-10 bg-white text-black md:group-hover:opacity-100 md:group-hover:top-5 md:group-hover:right-5 rounded-full p-3 md:p-4 transition-all" +
           (isLock
-            ? " md:bg-black md:text-white md:opacity-0 top-5 right-5"
+            ? " md:bg-black md:text-white md:opacity-0 top-4 right-4"
             : " opacity-0")
         }
       >
