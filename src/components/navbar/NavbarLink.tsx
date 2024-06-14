@@ -13,10 +13,7 @@ function NavbarLink({ name, href, isSelected }: LinkProps) {
         (isSelected ? " bg-white" : "")
       }
     >
-      <Link
-        to={href}
-        className="block w-full h-10 text-sm leading-9 md:leading-10"
-      >
+      <Link to={href} className="block w-full h-10 text-sm leading-10">
         {name}
       </Link>
     </div>
