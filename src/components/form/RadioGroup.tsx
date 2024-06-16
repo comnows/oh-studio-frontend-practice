@@ -15,6 +15,8 @@ function RadioGroup({ name, answers }: RadioProps) {
         <label
           key={`${name}-${index}`}
           className="block bg-[#F8FAFC] has-[:checked]:bg-[#CBD5E1] border-2 has-[:checked]:border-[#64748B] border-[#CBD5E1] rounded-lg mb-2 px-4 py-4"
+          data-aos="fade-up"
+          data-aos-delay="200"
         >
           <input
             type="radio"

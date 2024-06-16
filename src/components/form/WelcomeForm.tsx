@@ -21,11 +21,21 @@ function WelcomeForm() {
 
   return (
     <>
-      <h3 className="font-semibold">Welcome!</h3>
-      <p className="text-sm text-dark-gray">
+      <h3 className="font-semibold" data-aos="fade-up">
+        Welcome!
+      </h3>
+      <p
+        className="text-sm text-dark-gray"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
         Thanks for providing your feedback - let's go!
       </p>
-      <div className="flex items-center gap-4 mt-6">
+      <div
+        className="flex items-center gap-4 mt-6"
+        data-aos="fade-up"
+        data-aos-delay="250"
+      >
         <Link
           to="role"
           className="bg-[#64748B] text-white ring-[#64748B] ring-2 ring-offset-2 rounded-lg px-3 py-2"
