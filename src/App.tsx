@@ -1,3 +1,5 @@
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/navbar/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -10,7 +12,12 @@ function App() {
     });
   });
 
-  return <></>;
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+    </>
+  );
 }
 
 export default App;
