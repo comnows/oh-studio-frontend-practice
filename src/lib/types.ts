@@ -9,6 +9,8 @@ export type Children = {
   children: React.ReactNode;
 };
 
+export type QuestionGroup = "role" | "companySize" | "knowUsFrom";
+
 type AnswerValue = string | null;
 
 export type Answer = {

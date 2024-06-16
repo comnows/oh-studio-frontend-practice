@@ -1,8 +1,8 @@
-import { Answer } from "../../lib/types";
+import { Answer, QuestionGroup } from "../../lib/types";
 import { useFormContext } from "./FormContext";
 
 type RadioProps = {
-  name: "role" | "companySize" | "knowUsFrom";
+  name: QuestionGroup;
   answers: readonly string[];
 };
 
