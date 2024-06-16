@@ -22,7 +22,7 @@ function Form() {
   return (
     <FormContext.Provider value={{ currentAnswers, setCurrentAnswers }}>
       <div className="flex justify-center">
-        <div className="flex flex-col justify-center gap-1 w-full max-w-[400px] h-screen">
+        <div className="flex flex-col justify-center gap-1 w-full max-w-[400px] h-screen px-2">
           <Outlet />
         </div>
       </div>
