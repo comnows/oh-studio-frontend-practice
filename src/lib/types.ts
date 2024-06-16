@@ -1,5 +1,12 @@
 import React from "react";
 
+export type CardType = {
+  name: string;
+  image: string;
+  isVideo?: boolean;
+  isLock?: boolean;
+};
+
 export type Link = {
   name: string;
   href: string;
