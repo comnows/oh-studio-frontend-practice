@@ -8,3 +8,11 @@ export type Link = {
 export type Children = {
   children: React.ReactNode;
 };
+
+type AnswerValue = string | null;
+
+export type Answer = {
+  role: AnswerValue;
+  companySize: AnswerValue;
+  knowUsFrom: AnswerValue;
+};
