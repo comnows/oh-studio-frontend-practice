@@ -1,7 +1,7 @@
 import Question from "../Question";
 import RadioGroup from "../RadioGroup";
 
-function RoleForm() {
+function CompanySizeForm() {
   const answer = [
     "Only me",
     "1-5 employees",
@@ -26,4 +26,4 @@ function RoleForm() {
   );
 }
 
-export default RoleForm;
+export default CompanySizeForm;

@@ -1,7 +1,7 @@
 import Question from "../Question";
 import RadioGroup from "../RadioGroup";
 
-function RoleForm() {
+function KnowUsFromForm() {
   const answer = [
     "Recommendation",
     "Social Media",
@@ -26,4 +26,4 @@ function RoleForm() {
   );
 }
 
-export default RoleForm;
+export default KnowUsFromForm;
