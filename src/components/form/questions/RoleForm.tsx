@@ -1,5 +1,6 @@
 import Question from "../Question";
 import RadioGroup from "../RadioGroup";
+import FormLinkButton from "../FormLinkButton";
 
 function RoleForm() {
   const answer = [
@@ -17,9 +18,7 @@ function RoleForm() {
         <RadioGroup name="role" answers={answer} />
       </div>
       <div className="flex justify-end mt-2">
-        <button className="bg-[#64748B] text-white rounded-lg px-3 py-2">
-          Next
-        </button>
+        <FormLinkButton name="Next" group="role" path="/form/companysize" />
       </div>
     </>
   );

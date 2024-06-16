@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import Question from "../Question";
 import RadioGroup from "../RadioGroup";
+import FormLinkButton from "../FormLinkButton";
 
 function KnowUsFromForm() {
   const answer = [
@@ -17,10 +19,8 @@ function KnowUsFromForm() {
         <RadioGroup name="knowUsFrom" answers={answer} />
       </div>
       <div className="flex justify-between mt-2">
-        <button>Back</button>
-        <button className="bg-[#64748B] text-white rounded-lg px-3 py-2">
-          Finish
-        </button>
+        <Link to="/form/companysize">Back</Link>
+        <FormLinkButton name="Finish" group="knowUsFrom" path="/form/thank" />
       </div>
     </>
   );
