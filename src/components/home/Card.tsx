@@ -1,22 +1,28 @@
 import { FiArrowUpRight, FiLock } from "react-icons/fi";
+import { CardType } from "../../lib/types";
 
-type CardProps = {
-  name: string;
-  image: string;
-  isLock?: boolean;
-};
-
-function Card({ name, image, isLock = false }: CardProps) {
+function Card({ name, image, isVideo = false, isLock = false }: CardType) {
   return (
     <a className="group flex max-md:gap-[10px] max-md:flex-col relative aspect-[1.3/1] *:duration-500 overflow-hidden">
       <div className=" relative w-full h-full rounded-xl overflow-hidden">
         <div className="absolute -top-[5%] -left-[5%] w-[110%] h-[110%] rounded-xl overflow-hidden md:group-hover:bg-black transition-colors duration-500">
           <div className="w-full h-full opacity-100 md:group-hover:blur-md transition duration-500">
-            <img
-              src={image}
-              alt=""
-              className="w-full h-full object-cover object-top"
-            />
+            {!isVideo ? (
+              <img
+                src={image}
+                alt=""
+                className="w-full h-full object-cover object-top"
+              />
+            ) : (
+              <video
+                src={image}
+                className="w-full h-full object-cover object-top"
+                loop
+                autoPlay
+                playsInline
+                muted
+              />
+            )}
           </div>
         </div>
       </div>
