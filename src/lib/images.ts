@@ -10,3 +10,11 @@ export { default as Card09 } from "/images/card/card-09.mp4";
 export { default as Card10 } from "/images/card/card-10.jpg";
 export { default as Card11 } from "/images/card/card-11.jpg";
 export { default as Card12 } from "/images/card/card-12.mp4";
+
+export { default as Project01 } from "/images/project/project-01.jpg";
+export { default as Project02 } from "/images/project/project-02.jpg";
+export { default as Project03 } from "/images/project/project-03.jpg";
+export { default as Project04 } from "/images/project/project-04.jpg";
+export { default as Project05 } from "/images/project/project-05.jpg";
+export { default as Project06 } from "/images/project/project-06.jpg";
+export { default as Project07 } from "/images/project/project-07.jpg";
