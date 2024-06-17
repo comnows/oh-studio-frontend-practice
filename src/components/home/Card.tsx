@@ -1,9 +1,20 @@
 import { FiArrowUpRight, FiLock } from "react-icons/fi";
 import { CardType } from "../../lib/types";
+import ConditionalLink from "./ConditionalLink";
 
-function Card({ name, image, isVideo = false, isLock = false }: CardType) {
+function Card({
+  name,
+  image,
+  path = "/project",
+  isVideo = false,
+  isLock = false,
+}: CardType) {
   return (
-    <a className="group flex max-md:gap-[10px] max-md:flex-col relative aspect-[1.3/1] *:duration-500 overflow-hidden">
+    <ConditionalLink
+      className="group flex max-md:gap-[10px] max-md:flex-col relative aspect-[1.3/1] *:duration-500 overflow-hidden"
+      isLock={isLock}
+      path={path}
+    >
       <div className=" relative w-full h-full rounded-xl overflow-hidden">
         <div className="absolute -top-[5%] -left-[5%] w-[110%] h-[110%] rounded-xl overflow-hidden md:group-hover:bg-black transition-colors duration-500">
           <div className="w-full h-full opacity-100 md:group-hover:blur-md transition duration-500">
@@ -40,7 +51,7 @@ function Card({ name, image, isVideo = false, isLock = false }: CardType) {
       >
         {isLock ? <FiLock /> : <FiArrowUpRight />}
       </div>
-    </a>
+    </ConditionalLink>
   );
 }
 

@@ -3,6 +3,7 @@ import React from "react";
 export type CardType = {
   name: string;
   image: string;
+  path?: string;
   isVideo?: boolean;
   isLock?: boolean;
 };
