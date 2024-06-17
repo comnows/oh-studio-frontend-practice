@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Home from "./components/home/Home.tsx";
 import Contact from "./components/contact/Contact.tsx";
-import Footer from "./components/general/Footer.tsx";
 import Form from "./components/form/Form.tsx";
 import RoleForm from "./components/form/questions/RoleForm.tsx";
 import CompanySizeForm from "./components/form/questions/CompanySizeForm.tsx";
@@ -13,6 +12,9 @@ import KnowUsFromForm from "./components/form/questions/KnowUsFromForm.tsx";
 import WelcomeForm from "./components/form/WelcomeForm.tsx";
 import ThankForm from "./components/form/ThankForm.tsx";
 import ResultForm from "./components/form/ResultForm.tsx";
+import Project from "./components/project/Project.tsx";
+import Navbar from "./components/navbar/Navbar.tsx";
+import Footer from "./components/general/Footer.tsx";
 
 const router = createBrowserRouter([
   {
@@ -21,16 +23,25 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: (
+          <>
+            <Home />
+          </>
+        ),
       },
       {
         path: "profile",
-        element: <Home />,
+        element: (
+          <>
+            <Home />
+          </>
+        ),
       },
       {
         path: "contact",
         element: (
           <>
+            <Navbar />
             <Contact size="page" />
             <Footer isFixed={true} />
           </>
@@ -69,6 +80,10 @@ const router = createBrowserRouter([
             element: <ResultForm />,
           },
         ],
+      },
+      {
+        path: "project",
+        element: <Project />,
       },
     ],
   },

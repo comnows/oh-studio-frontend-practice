@@ -1,6 +1,8 @@
 import { createContext, useState } from "react";
 import { Answer } from "../../lib/types";
 import { Outlet } from "react-router-dom";
+import Navbar from "../navbar/Navbar";
+import Footer from "../general/Footer";
 
 type FormContextType = {
   currentAnswers: Answer;
@@ -20,13 +22,17 @@ function Form() {
   });
 
   return (
-    <FormContext.Provider value={{ currentAnswers, setCurrentAnswers }}>
-      <div className="flex justify-center">
-        <div className="flex flex-col justify-center gap-1 w-full max-w-[400px] h-screen px-2">
-          <Outlet />
+    <>
+      <Navbar />
+      <FormContext.Provider value={{ currentAnswers, setCurrentAnswers }}>
+        <div className="flex justify-center">
+          <div className="flex flex-col justify-center gap-1 w-full max-w-[400px] h-screen px-2">
+            <Outlet />
+          </div>
         </div>
-      </div>
-    </FormContext.Provider>
+      </FormContext.Provider>
+      <Footer isFixed={true} />
+    </>
   );
 }
 

@@ -1,6 +1,8 @@
+import Navbar from "../navbar/Navbar";
 import Contact from "../contact/Contact";
 import Footer from "../general/Footer";
 import Title from "../general/Title";
+
 import Card from "./Card";
 import {
   Card01,
@@ -17,6 +19,7 @@ import {
   Card12,
 } from "../../lib/images";
 import { CardType } from "../../lib/types";
+import ScrollToTop from "../general/ScrollToTop";
 
 const cards: CardType[] = [
   { name: "Meadow", image: Card01 },
@@ -36,6 +39,8 @@ const cards: CardType[] = [
 function Home() {
   return (
     <>
+      <ScrollToTop />
+      <Navbar />
       <Title />
       <div
         className="flex justify-center"
