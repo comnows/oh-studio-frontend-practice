@@ -6,9 +6,6 @@ services:
       dockerfile: dockerfile.dev
     ports:
       - "8080:8080"
-    volumes:
-      - .:/app
-      - node_modules:/app/node_modules
     environment:
       - NODE_ENV=development
     command: npm run dev
@@ -19,5 +16,3 @@ services:
           target: /app
         - action: rebuild
           path: package.json
-volumes:
-  node_modules:
